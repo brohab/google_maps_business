@@ -1,4 +1,4 @@
 requirements:
   file: requirements.txt
 stacks:
-  default: scrapy:2.11
+  default: scrapy:1.6-py3
