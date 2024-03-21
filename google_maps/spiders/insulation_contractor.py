@@ -12,7 +12,7 @@ from urllib.parse import quote_plus
 
 
 class MapsSpider(scrapy.Spider):
-    name = 'google_business4' 
+    name = 'insulation_contractor' 
     search_keyword = '{keyword}'
     base_url = 'https://www.google.ca/'
     start_urls = ["https://quotes.toscrape.com/"]
@@ -138,7 +138,7 @@ class MapsSpider(scrapy.Spider):
             return ''
 
     def get_input(self):
-        csv_data = pkgutil.get_data("google_maps", "input/search_queries4.csv")
+        csv_data = pkgutil.get_data("google_maps", "input/insulation_contractor.csv")
         csv_string = csv_data.decode('utf-8')
         csv_file = io.StringIO(csv_string)
         return list(csv.DictReader(csv_file))
