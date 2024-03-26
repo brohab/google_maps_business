@@ -81,12 +81,7 @@ class MapsSpider(scrapy.Spider):
         item['Company Website'] = self.get_url(response.css('a.iPF7ob::attr(href)').get('').strip())
         item['Company Address'] = response.css('div.fccl3c span::text').get('').strip()
         item.update(self.get_address(response.css('div.fccl3c span::text').get('').strip()))
-        if not item.get('Company Address') or 'United States' in item.get('Company Address'):
-            yield item
-        elif item.get('address1') and not item.get('country'):
-            yield item
-        else:
-            yield {}
+        yield item
 
     def get_address(self, address):
         address1, city, state, zip_code, country = [], [], [], [], []
