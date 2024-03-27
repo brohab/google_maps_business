@@ -87,8 +87,8 @@ ROBOTSTXT_OBEY = False
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = "scrapy.extensions.httpcache.FilesystemCacheStorage"
 ROTATING_PROXY_LIST = [
-    'http://rmyvycil-rotate:9mnjfw22aa6f@p.webshare.io:80/',
-    'https://rmyvycil-rotate:9mnjfw22aa6f@p.webshare.io:80/'
+    'http://rmyvycil-US-rotate:9mnjfw22aa6f@p.webshare.io:80/',
+    'https://rmyvycil-US-rotate:9mnjfw22aa6f@p.webshare.io:80/'
     # ...
 ]
 # Set settings whose default value is deprecated to a future-proof value
