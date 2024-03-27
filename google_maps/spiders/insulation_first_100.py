@@ -133,7 +133,7 @@ class MapsSpider(scrapy.Spider):
             return ''
 
     def get_input(self):
-        csv_data = pkgutil.get_data("google_maps", "input/insulation_first_100.csv")
+        csv_data = pkgutil.get_data("google_maps", "input/insulation_contractor.csv")
         csv_string = csv_data.decode('utf-8')
         csv_file = io.StringIO(csv_string)
         return list(csv.DictReader(csv_file))
